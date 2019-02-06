@@ -18,6 +18,7 @@ class CreateAchievementsTables extends Migration
             $table->string('name');
             $table->string('description');
             $table->unsignedInteger('points')->default(1);
+            $table->unsignedInteger('experience')->default(1);
             $table->boolean('secret')->default(false);
             $table->string('class_name');
             $table->timestamps();
@@ -27,6 +28,7 @@ class CreateAchievementsTables extends Migration
             $table->unsignedInteger('achievement_id');
             $table->morphs('achiever');
             $table->unsignedInteger('points')->default(0);
+            $table->unsignedInteger('experience')->default(1);
             $table->timestamp('unlocked_at')->nullable()->default(null);
             $table->timestamps();
 

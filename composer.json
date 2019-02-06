@@ -1,11 +1,11 @@
 {
-    "name": "gstt/laravel-achievements",
+    "name": "mitch/laravel-achievements",
     "description": "Achievements for Laravel 5.3+",
     "license": "MIT",
     "authors": [
         {
-            "name": "Gabriel Simonetti",
-            "email": "simonettigo@gmail.com"
+            "name": "Mitch Mertz",
+            "email": "m.mertz93@gmail.com"
         }
     ],
     "autoload": {
@@ -13,8 +13,8 @@
             "src/Migrations"
         ],
         "psr-4": {
-            "Gstt\\Achievements\\": "src/",
-            "Gstt\\Tests\\": "tests/"
+            "Mitch\\Achievements\\": "src/",
+            "Mitch\\Tests\\": "tests/"
         }
     },
     "require": {

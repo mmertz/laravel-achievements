@@ -1,9 +1,9 @@
 <h1 align="center">Laravel Achievements</h1>
 
 <p align="center">
-<a href="https://travis-ci.org/gstt/laravel-achievements"><img src="https://travis-ci.org/gstt/laravel-achievements.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/gstt/laravel-achievements"><img src="https://poser.pugx.org/gstt/laravel-achievements/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/gstt/laravel-achievements"><img src="https://poser.pugx.org/gstt/laravel-achievements/license.svg" alt="License"></a>
+<a href="https://travis-ci.org/Mitch/laravel-achievements"><img src="https://travis-ci.org/Mitch/laravel-achievements.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/Mitch/laravel-achievements"><img src="https://poser.pugx.org/Mitch/laravel-achievements/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/Mitch/laravel-achievements"><img src="https://poser.pugx.org/Mitch/laravel-achievements/license.svg" alt="License"></a>
 </p>
 
 An implementation of an Achievement System in Laravel, inspired by Laravel's Notification system. 
@@ -29,7 +29,7 @@ An implementation of an Achievement System in Laravel, inspired by Laravel's Not
 Default installation is via [Composer](https://getcomposer.org/).
 
 ```
-composer require gstt/laravel-achievements
+composer require mitch/laravel-achievements
 ```
 
 Add the Service Provider to your `config/app` file in the `providers` section.
@@ -37,7 +37,7 @@ Add the Service Provider to your `config/app` file in the `providers` section.
 ```php
 'providers' => [
     ...
-    Gstt\Achievements\AchievementsServiceProvider::class,
+    Mitch\Achievements\AchievementsServiceProvider::class,
 ```
 
 Backup your database and run the migrations in order to setup the required tables on the database.
@@ -63,7 +63,7 @@ what the Achievement is and how to unlock it. When you're done, it should look l
 
 namespace App\Achievements;
 
-use Gstt\Achievements\Achievement;
+use Mitch\Achievements\Achievement;
 
 class UserMadeAPost extends Achievement
 {
@@ -87,7 +87,7 @@ Achievements can be unlocked by using the `Achiever` trait.
 
 namespace App;
 
-use Gstt\Achievements\Achiever;
+use Mitch\Achievements\Achiever;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -118,7 +118,7 @@ In order to do that, you must set an additional parameter on your `UserMade10Pos
 
 namespace App\Achievements;
 
-use Gstt\Achievements\Achievement;
+use Mitch\Achievements\Achievement;
 
 class UserMade10Posts extends Achievement
 {
@@ -136,6 +136,11 @@ class UserMade10Posts extends Achievement
      * The amount of "points" this user need to obtain in order to complete this achievement
      */
     public $points = 10;
+    
+    /*
+     * The amount of experience points gained
+     */
+    public $experience = 50;
 }
 ```
 You may now control the progress by the methods `addProgress` and `removeProgress` on the `Achiever` trait. 
@@ -191,7 +196,7 @@ There are also three additional helpers on the `Achiever` trait: `lockedAchievem
 ### Listening to all Achievements
 Laravel Achievements provides two events that can be listened to in order to provide "Achievement Unlocked" messages or similar. Both events receive the instance of `AchievementProgress` that triggered them. 
 
-The `Gstt\Achievements\Event\Progress` event triggers whenever an Achiever makes progress, but doesn't unlock an Achievement. The `Gstt\Achievements\Event\Unlocked` event triggers whenever an Achiever actually unlocks an achievement.
+The `Mitch\Achievements\Event\Progress` event triggers whenever an Achiever makes progress, but doesn't unlock an Achievement. The `Mitch\Achievements\Event\Unlocked` event triggers whenever an Achiever actually unlocks an achievement.
  
 Details on how to listen to those events are explained on [Laravel's Event documentation](https://laravel.com/docs/5.3/events).
 
@@ -204,7 +209,7 @@ The event listeners mentioned above triggers for all Achievements. If you would 
 
 namespace App\Achievements;
 
-use Gstt\Achievements\Achievement;
+use Mitch\Achievements\Achievement;
 
 class UserMade50Posts extends Achievement
 {
@@ -222,6 +227,11 @@ class UserMade50Posts extends Achievement
      * The amount of "points" this user need to obtain in order to complete this achievement
      */
     public $points = 50;
+
+    /*
+     * The amount of experience points gained
+     */
+    public $experience = 50;
     
     /*
      * Triggers whenever an Achiever makes progress on this achievement
