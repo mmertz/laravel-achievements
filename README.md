@@ -37,7 +37,7 @@ Add the Service Provider to your `config/app` file in the `providers` section.
 ```php
 'providers' => [
     ...
-    Mitch\Achievements\AchievementsServiceProvider::class,
+    Mmertz\Achievements\AchievementsServiceProvider::class,
 ```
 
 Backup your database and run the migrations in order to setup the required tables on the database.
@@ -63,7 +63,7 @@ what the Achievement is and how to unlock it. When you're done, it should look l
 
 namespace App\Achievements;
 
-use Mitch\Achievements\Achievement;
+use Mmertz\Achievements\Achievement;
 
 class UserMadeAPost extends Achievement
 {
@@ -87,7 +87,7 @@ Achievements can be unlocked by using the `Achiever` trait.
 
 namespace App;
 
-use Mitch\Achievements\Achiever;
+use Mmertz\Achievements\Achiever;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -118,7 +118,7 @@ In order to do that, you must set an additional parameter on your `UserMade10Pos
 
 namespace App\Achievements;
 
-use Mitch\Achievements\Achievement;
+use Mmertz\Achievements\Achievement;
 
 class UserMade10Posts extends Achievement
 {
@@ -136,7 +136,7 @@ class UserMade10Posts extends Achievement
      * The amount of "points" this user need to obtain in order to complete this achievement
      */
     public $points = 10;
-    
+
     /*
      * The amount of experience points gained
      */
@@ -196,7 +196,7 @@ There are also three additional helpers on the `Achiever` trait: `lockedAchievem
 ### Listening to all Achievements
 Laravel Achievements provides two events that can be listened to in order to provide "Achievement Unlocked" messages or similar. Both events receive the instance of `AchievementProgress` that triggered them. 
 
-The `Mitch\Achievements\Event\Progress` event triggers whenever an Achiever makes progress, but doesn't unlock an Achievement. The `Mitch\Achievements\Event\Unlocked` event triggers whenever an Achiever actually unlocks an achievement.
+The `Mmertz\Achievements\Event\Progress` event triggers whenever an Achiever makes progress, but doesn't unlock an Achievement. The `Mmertz\Achievements\Event\Unlocked` event triggers whenever an Achiever actually unlocks an achievement.
  
 Details on how to listen to those events are explained on [Laravel's Event documentation](https://laravel.com/docs/5.3/events).
 
@@ -209,7 +209,7 @@ The event listeners mentioned above triggers for all Achievements. If you would 
 
 namespace App\Achievements;
 
-use Mitch\Achievements\Achievement;
+use Mmertz\Achievements\Achievement;
 
 class UserMade50Posts extends Achievement
 {
