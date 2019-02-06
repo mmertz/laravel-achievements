@@ -1,11 +1,11 @@
 <?php
 
-namespace Gstt\Achievements;
+namespace Mmertz\Achievements;
 
-use Gstt\Achievements\Event\Unlocked as UnlockedEvent;
-use Gstt\Achievements\Event\Progress as ProgressEvent;
-use Gstt\Achievements\Model\AchievementDetails;
-use Gstt\Achievements\Model\AchievementProgress;
+use Mmertz\Achievements\Event\Unlocked as UnlockedEvent;
+use Mmertz\Achievements\Event\Progress as ProgressEvent;
+use Mmertz\Achievements\Model\AchievementDetails;
+use Mmertz\Achievements\Model\AchievementProgress;
 use Illuminate\Database\Eloquent\Builder;
 
 abstract class Achievement

@@ -1,8 +1,8 @@
 <?php
 
-namespace Gstt\Achievements\Event;
+namespace Mmertz\Achievements\Event;
 
-use Gstt\Achievements\Model\AchievementProgress;
+use Mmertz\Achievements\Model\AchievementProgress;
 use Illuminate\Queue\SerializesModels;
 
 class Unlocked

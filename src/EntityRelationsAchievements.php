@@ -6,10 +6,10 @@
  * Time: 21:03
  */
 
-namespace Gstt\Achievements;
+namespace Mmertz\Achievements;
 
-use Gstt\Achievements\Model\AchievementDetails;
-use Gstt\Achievements\Model\AchievementProgress;
+use Mmertz\Achievements\Model\AchievementDetails;
+use Mmertz\Achievements\Model\AchievementProgress;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 

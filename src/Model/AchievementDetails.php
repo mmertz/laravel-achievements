@@ -1,6 +1,6 @@
 <?php
 
-namespace Gstt\Achievements\Model;
+namespace Mmertz\Achievements\Model;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
@@ -9,10 +9,10 @@ use Illuminate\Database\Eloquent\Model;
  * Model for the table that will store the details for an Achievement Progress.
  *
  * @category Model
- * @package  Gstt\Achievements\Model
+ * @package  Mmertz\Achievements\Model
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
- * @link     https://github.com/gstt/laravel-achievements
+ * @link     https://github.com/Mmertz/laravel-achievements
  */
 class AchievementDetails extends Model
 {
@@ -25,7 +25,7 @@ class AchievementDetails extends Model
      */
     public function progress()
     {
-        return $this->hasMany('Gstt\Achievements\Model\AchievementProgress', 'achievement_id');
+        return $this->hasMany('Mmertz\Achievements\Model\AchievementProgress', 'achievement_id');
     }
 
     /**

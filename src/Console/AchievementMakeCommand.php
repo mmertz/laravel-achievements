@@ -1,6 +1,6 @@
 <?php
 
-namespace Gstt\Achievements\Console;
+namespace Mmertz\Achievements\Console;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -8,10 +8,10 @@ use Illuminate\Console\GeneratorCommand;
  * Creates an achievement class stub.
  *
  * @category Command
- * @package  Gstt\Achievements\Command
+ * @package  Mmertz\Achievements\Command
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
- * @link     https://github.com/gstt/laravel-achievements
+ * @link     https://github.com/Mmertz/laravel-achievements
  */
 class AchievementMakeCommand extends GeneratorCommand
 {

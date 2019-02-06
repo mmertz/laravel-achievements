@@ -1,6 +1,6 @@
 <?php
 
-namespace Gstt\Achievements\Model;
+namespace Mmertz\Achievements\Model;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
@@ -10,10 +10,10 @@ use Ramsey\Uuid\Uuid;
  * Model for the table that will store the data regarding achievement progress and unlocks.
  *
  * @category Model
- * @package  Gstt\Achievements\Model
+ * @package  Mmertz\Achievements\Model
  * @author   Gabriel Simonetti <simonettigo@gmail.com>
  * @license  MIT License
- * @link     https://github.com/gstt/laravel-achievements
+ * @link     https://github.com/Mmertz/laravel-achievements
  */
 class AchievementProgress extends Model
 {
@@ -62,7 +62,7 @@ class AchievementProgress extends Model
      */
     public function details()
     {
-        return $this->belongsto('Gstt\Achievements\Model\AchievementDetails', 'achievement_id');
+        return $this->belongsto('Mmertz\Achievements\Model\AchievementDetails', 'achievement_id');
     }
 
     /**

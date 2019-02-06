@@ -1,6 +1,6 @@
 <?php
 
-namespace Gstt\Achievements;
+namespace Mmertz\Achievements;
 
 trait RoutesAchievements
 {

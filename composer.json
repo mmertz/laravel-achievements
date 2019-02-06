@@ -1,5 +1,5 @@
 {
-    "name": "mitch/laravel-achievements",
+    "name": "mmertz/laravel-achievements",
     "description": "Achievements for Laravel 5.3+",
     "license": "MIT",
     "authors": [
@@ -13,8 +13,8 @@
             "src/Migrations"
         ],
         "psr-4": {
-            "Mitch\\Achievements\\": "src/",
-            "Mitch\\Tests\\": "tests/"
+            "Mmertz\\Achievements\\": "src/",
+            "Mmertz\\Tests\\": "tests/"
         }
     },
     "require": {
